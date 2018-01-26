@@ -1,0 +1,22 @@
+body{
+    font-family: helvetica;
+    
+}
+.inside {
+    width: 100%;
+    float: left;
+}
+.inn {
+    width: 940px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 770px){ /* Tablet */
+    .inn {
+        width: 600px;
+    }
+}
+@media screen and (max-width: 450px){ /* Mobile */
+    .inn{
+        width: 300px;
+    }
+}

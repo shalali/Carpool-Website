@@ -1,0 +1,159 @@
+<?php 
+                    $dbname = "mdb_st8511x";
+                    $host = "mysql.cms.gre.ac.uk";
+                    $username = "st8511x";
+                    $password = "tina2";
+
+                    //est. connection
+                    $conn = mysqli_connect($host, $username, $password, $dbname);
+
+                    // Check connection
+                if (!$conn) {
+                    die("Connection failed: " . $conn->connect_error);
+                } 
+                    
+                $sql = "UPDATE user SET status = 1 WHERE username = '".usernameVerified."'";                 mysqli_query($conn,$sql);
+                    mysqli_close($conn);
+
+                    ?>
+                    
+
+<input id="btnRegister" type="submit" value="Register" name="register" onclick="if(validateAll() && readyToSubmit) {return true;}else{return false;}">
+
+            <img src="model_captcha.php" id="captchaimg">
+
+ //<h2>Welcome <?php echo $_SESSION["userAdded"]; ?></h2>
+
+
+---
+"<?php if (isset($_SESSION["userAdded"])) {
+            echo $_SESSION["userAdded"];
+       
+        }
+        else if(isset($_SESSION["userLoggingIn"])){
+            echo $_SESSION["userLoggingIn"]))
+        }
+        ?>";  
+
+----
+}
+        else if(isset($_SESSION["userLoggingIn"])){
+            echo true;
+        }
+        ?>";  
+           
+        if (see == 1){
+            
+            var a = "<?php echo $_SESSION["userLoggingIn"]; ?>";
+        
+            document.getElementById("lblWelcome").innerHTML = "WELCOME" + a;
+        }
+           else{
+            
+            var b = "<?php echo $_SESSION["userAdded"]; ?>";
+               
+            document.getElementById("lblWelcome").innerHTML = "WELCOME" + b;
+                    
+                    }
+
+-----
+   if(loginRoute == 1){
+           //user is logging in directly via home page
+            
+           }
+        else if (loginRoute ==0 ){
+        //user is logging in after registering and verifying
+    
+            -----
+ function rightPassword() {
+            var p = document.getElementById("lblPError").value;
+            var pass = "<?php echo $_SESSION["pass"]; ?>";
+            
+            if (pass == "Wrong password.") {
+                p.innerHTML = pass;
+                return false;
+            } else {
+                return true;
+            }
+            
+                      
+        } //right password
+
+        function rightUsername() {
+            var u = document.getElementById("lblUseError").value;
+            var userNo = "<?php echo $_SESSION["usernameNo"]; ?>";
+            
+            if (userNo == "Invalid username.") {
+                u.innerHTML = userNo; 
+                return false;
+            } else {
+                return true;
+            }
+        } //right username
+
+-----
+  var enteredU = document.getElementById("txtName").value;
+            var entered = document.getElementById("txtPassword").value;
+            
+            var checkPass = "<?php $_GET["passEntered"]; ?>";         
+            var checkUser = "<?php $_GET["userEntered"];?>";
+            
+            if(enteredU == ""){
+                alert("Enter username.");
+                return false; 
+               }
+             if(enteredP == ""){
+                alert("Enter password.");
+                return false; 
+               }
+            if(checkUser == 0){
+                alert("Invalid username.");
+                return false; 
+
+            }
+            if(checkPass == 0 || ){
+                alert("Wrong password.");
+                return false; 
+            }
+
+
+   
+        var enteredP = document.getElementById("txtPassword").value;
+        var enteredU = document.getElementById("txtName").value;
+
+        function validatePass(){
+            
+            //var enteredU = document.getElementById("txtName").value;
+            
+            var checkPass = "<?php echo $_GET["passEntered"];?>";;
+
+                       
+            if(checkPass == 0 || enteredP==""){
+                alert("Wrong password.");
+                return false; 
+            }         
+            
+        return true;   
+        }
+
+------
+ function validatePassword() {
+     var enteredP = document.getElementById("txtPassword").value;
+    var enteredU = document.getElementById("txtName").value;
+     var valid;
+     
+     var dataObject = { 'username': enteredU, 'password' : enteredP}
+  $.ajax({
+    async:false,
+    url: "model_login.php",
+    data: dataObject,
+    success: function(data) {
+     valid=data;
+    }
+  });
+     
+     if(!valid)
+         alert('aaaaaa');
+}
+  ---
+https://www.tutorialspoint.com/php/mysql_paging_php.htm
